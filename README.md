@@ -11,8 +11,7 @@ This was compilation of the following:
 If your development environment is different (i.e., MacOS or Windows only), you'll need a little bit more [digging](https://www.google.com).
 
 ## Step 1. Open an AWS account (it's free, for the most part)
-Go to [AWS](https://aws.amazon.com/) and open an account if you don't have one already.
-
+Go to [AWS](https://aws.amazon.com/) and open an account if you don't have one already.<br />
 It will ask your credit card information in case you go over the [Free Tier](https://aws.amazon.com/free/) limit, but as you can see here, the [Free Tier](https://aws.amazon.com/free/) provides plenty.
 
 ![Free Tier](https://github.com/fastcyclist/Deployment_Python_Pickle_Flask_Zappa_AWSLambda/blob/master/AWS_FreeTier.PNG)
@@ -31,4 +30,20 @@ This is necessary for later steps. When you deploy your model using Zappa, it wo
 
 An important thing to remember is that you don't want to use your root credentials. You need to creat a new user and a user group to separate day-to-day activities from the root account.
 Think of this as not using <code>sudo</code> all the time everytime on your Linux.
+
+While working on this section, I learned the AWS documentations were pretty confusing. This is how I did it.<br />
+<ol>
+<li>1. [Creating your first IAM admin user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) <b>Note</b>: make sure you save the Access Key ID and Secret Access Key. They are like your ID and PW to interact with AWS. If you forgot to download/save it, delete the Access keys and create a new one.</li>
+<li>2. [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)<br />
+<b>tldr</b>: type <code>aws configure</code>. When it asks <code>AWS Access Key ID [None]:</code> and <code>AWS Secret Access Key [None]:</code>, supply what you saved in the first step.
+I set my <code>Default region name [None]: us-east-2</code> and <code>Default output format [None]: json</code>.</li>
+<li>3. Type <code>aws configure list</code>. If it returns something other than <code><not set></code>, you're good to go.</li>
+</ol>
+
+
+
+
+
+
+
 
