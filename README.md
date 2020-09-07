@@ -21,7 +21,8 @@ It will ask your credit card information in case you go over the [Free Tier](htt
 ## Step 2. [Download AWS command-line interface (CLI)](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 Try <code>aws --version</code> to see if you have it already.
 If you have it, it will return something similar to this:
-	<code>aws-cli/2.0.46 Python/3.7.3 Linux/4.15.0-112-generic exe/x86_64.ubuntu.18</code>
+
+<code>aws-cli/2.0.46 Python/3.7.3 Linux/4.15.0-112-generic exe/x86_64.ubuntu.18</code>
 
 I'm using AWS CLI [version 2 for Linux](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html).
 
