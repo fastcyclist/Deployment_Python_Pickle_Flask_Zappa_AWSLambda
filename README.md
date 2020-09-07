@@ -33,11 +33,12 @@ Think of this as not using <code>sudo</code> all the time everytime on your Linu
 
 While working on this section, I learned the AWS documentations were pretty confusing. This is how I did it.<br />
 <ol>
-<li>[Creating your first IAM admin user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) <b>Note</b>: make sure you save the Access Key ID and Secret Access Key. They are like your ID and PW to interact with AWS. If you forgot to download/save it, delete the Access keys and create a new one.</li>
-<li>[Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)<br />
+<li> [Creating your first IAM admin user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) <br />
+<b>Note</b>: make sure you save the Access Key ID and Secret Access Key. They are like your ID and PW to interact with AWS. If you forgot to download/save it, delete the Access keys and create a new one. </li>
+<li> [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) <br />
 <b>tldr</b>: type <code>aws configure</code>. When it asks <code>AWS Access Key ID [None]:</code> and <code>AWS Secret Access Key [None]:</code><br />
 supply what you saved in the first step. I set my <code>Default region name [None]: us-east-2</code> and <code>Default output format [None]: json</code>.</li>
-<li>3. Type <code>aws configure list</code>. If it returns something other than <code><not set></code>, you're good to go.</li>
+<li>3. Type <code>aws configure list</code>. If it returns something other than <code>'<not set>'</code>, you're good to go.</li>
 </ol>
 
 
