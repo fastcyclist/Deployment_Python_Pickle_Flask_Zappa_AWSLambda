@@ -1,4 +1,4 @@
-# Deployment_Python_Pickle_Flask_Zappa_AWSLambda
+# Deployment of Python (sklearn) model using Pickle, Flask, and Zappa to AWS Lambda
 This is an example of deploying a sklearn ML model using [Pickle](https://docs.python.org/3.6/library/pickle.html), [Flask](https://flask.palletsprojects.com/en/1.1.x/), & [Zappa](https://github.com/Miserlou/Zappa) to [AWS Lambda](https://en.wikipedia.org/wiki/AWS_Lambda).
 
 This was compilation of the following:
