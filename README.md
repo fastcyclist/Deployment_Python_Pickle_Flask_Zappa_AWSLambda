@@ -7,7 +7,7 @@ This was compilation of the following:
 - [How to deploy a Serverless Machine Learning Microservice with AWS Lambda, AWS API Gateway and scikit-learn](https://medium.com/@patrickmichelberger/how-to-deploy-a-serverless-machine-learning-microservice-with-aws-lambda-aws-api-gateway-and-d5b8cbead846)
 - [What are the different use cases of joblib versus pickle?](https://stackoverflow.com/questions/12615525/what-are-the-different-use-cases-of-joblib-versus-pickle)
 
-## I do most of my work on a [Linux](https://releases.ubuntu.com/18.04.5/) machine and connect to it via [SecureCRT](https://www.vandyke.com/products/securecrt/index.html) from a Windows machine.
+## I do most of my work on a [Linux](https://releases.ubuntu.com/18.04.5/) machine and connect to it via [SecureCRT](https://www.vandyke.com/products/securecrt/index.html) from a Windows machine
 If your development environment is different (i.e., MacOS or Windows only), you'll need a little bit more [digging](https://www.google.com).
 
 ## Step 1. Open an AWS account (it's free, for the most part)
@@ -25,22 +25,13 @@ If you have it, it will return something similar to this:<br />
 I'm using AWS CLI [version 2 for Linux](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html).
 
 
-## Step 3. [Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) your aws (on Linux) with correct credentials.
+## Step 3. [Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) your aws (on Linux) with correct credentials
 This is necessary for later steps. When you deploy your model using Zappa, it won't ask you to type in credentials. It will use whatever is already configured and saved.
 
 An important thing to remember is that you don't want to use your root credentials. You need to creat a new user and a user group to separate day-to-day activities from the root account.
 Think of this as not using <code>sudo</code> all the time everytime on your Linux.
 
 While working on this section, I learned the AWS documentations were pretty confusing. This is how I did it.<br />
-<ol>
-<li> [Creating your first IAM admin user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) <br />
-<b>Note</b>: make sure you save the Access Key ID and Secret Access Key. They are like your ID and PW to interact with AWS. If you forgot to download/save it, delete the Access keys and create a new one. </li>
-<li> [Configuration and credential file settings](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) <br />
-<b>tldr</b>: type <code>aws configure</code>. When it asks <code>AWS Access Key ID [None]:</code> and <code>AWS Secret Access Key [None]:</code><br />
-supply what you saved in the first step. I set my <code>Default region name [None]: us-east-2</code> and <code>Default output format [None]: json</code>.</li>
-<li> Type <code>aws configure list</code>. If it returns something other than <code>not set</code>, you're good to go.</li>
-</ol>
-
 
 1. [Creating your first IAM admin user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) <br />
 <b>Note</b>: make sure you save the Access Key ID and Secret Access Key. They are like your ID and PW to interact with AWS. If you forgot to download/save it, delete the Access keys and create a new one.
@@ -48,4 +39,10 @@ supply what you saved in the first step. I set my <code>Default region name [Non
 <b>tldr</b>: type <code>aws configure</code>. When it asks <code>AWS Access Key ID [None]:</code> and <code>AWS Secret Access Key [None]:</code><br />
 supply what you saved in the first step. I set my <code>Default region name [None]: us-east-2</code> and <code>Default output format [None]: json</code>.
 3. Type <code>aws configure list</code>. If it returns something other than <code>not set</code>, you're good to go.
+4. Make a S3 bucket.
+5. Upload a sample file to S3 for testing.
+
+## Step 4. Have your model ready and save it in pkl
+
+
 
