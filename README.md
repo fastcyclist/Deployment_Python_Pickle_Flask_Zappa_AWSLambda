@@ -12,6 +12,7 @@ If your development environment is different (i.e., MacOS or Windows only), you'
 
 # Step 1. Open an AWS account (it's free, for the most part)
 Go to [AWS](https://aws.amazon.com/) and open an account if you don't have one already.
+
 It will ask your credit card information in case you go over the [Free Tier](https://aws.amazon.com/free/) limit, but as you can see here, the [Free Tier](https://aws.amazon.com/free/) provides plenty.
 ![Free Tier](https://github.com/fastcyclist/Deployment_Python_Pickle_Flask_Zappa_AWSLambda/blob/master/AWS_FreeTier.PNG)
 
