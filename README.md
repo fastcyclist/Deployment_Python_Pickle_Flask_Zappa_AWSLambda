@@ -25,7 +25,7 @@ If you have it, it will return something similar to this:<br />
 I'm using AWS CLI [version 2 for Linux](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html).
 
 
-## Step 3. [Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) your aws (on Linux) with correct credentials
+## Step 3. [Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) your AWS (on Linux) with correct credentials
 This is necessary for later steps. When you deploy your model using Zappa, it won't ask you to type in credentials. It will use whatever is already configured and saved.
 
 An important thing to remember is that you don't want to use your root credentials. You need to creat a new user and a user group to separate day-to-day activities from the root account.
